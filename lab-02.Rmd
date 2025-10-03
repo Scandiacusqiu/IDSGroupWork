@@ -114,7 +114,11 @@ plastic_data_all %>%
 
 ```{r Ex4, message = FALSE}
 # Write your code here to answer exercise 4
-
-
+library(dplyr)
+plastic_data_all %>% 
+  rename("pop"=population,
+         mpo=mismanaged_plastic_ocean,
+         mp=mismanaged_plastic)%>%
+  mutate(region=case_when(region=="Latin America and The Caribbean"~"LAC"))
 
 ```
