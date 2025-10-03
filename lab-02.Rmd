@@ -12,7 +12,6 @@ library(tidyverse)
 library(readxl)
 ```
 
-
 ## Load & join data sets
 
 ```{r load-data, message = FALSE}
@@ -34,8 +33,6 @@ data4 <- read_excel("data/UN_country_region.xlsx")
 
 
 ```
-
-
 
 ```{r join-data, message = FALSE}
 # Member 2 (pair 1) write code to create object 'plastic_data_all':
@@ -64,15 +61,12 @@ plastic_data_all <- data4 %>%
 
 ```
 
-
 ```{r print-data, message = FALSE}
 # Member 2 (pair 1) adds code here to view the first 10 rows of 'plastic_data_all'
 
 plastic_data_all %>% head(n = 10)
 
 ```
-
-
 
 ## Exercises
 
@@ -81,12 +75,10 @@ plastic_data_all %>% head(n = 10)
 ```{r Ex1, message = FALSE}
 # Write your code here to answer exercise 1
 
-
-
+plastic_data_all %>% count(region)
+plastic_data_all %>% arrange(desc(region))
 
 ```
-
-
 
 ### Ex 2.
 
@@ -103,7 +95,6 @@ plastic_data_all %>%
 
 ```
 
-
 ### Ex 3.
 
 ```{r Ex3, message = FALSE}
@@ -112,7 +103,6 @@ plastic_data_all %>%
 
 
 ```
-
 
 ### Ex 4.
 
